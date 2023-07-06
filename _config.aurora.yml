@@ -102,7 +102,7 @@ site_meta:
 
 # For local development only!
 gitalk:
-  enable: true
+  enable: false
   autoExpand: true
   clientID: ''
   clientSecret: ''
@@ -118,17 +118,17 @@ gitalk:
 # Valine comment plugin (recommended!)
 # see https://valine.js.org/quickstart.html
 valine:
-  enable: false
-  app_id:
-  app_key:
-  avatar: ''
-  placeholder: Leave your thoughts behind~
+  enable: true
+  app_id: Bd1AhDRM8k4lNW5y17GCKbNT-gzGzoHsz
+  app_key: EOBwITGppWwIqR0aBUVMEFT1
+  avatar: monsterid
+  placeholder: 尊重是评论打动人心的入场券~
   visitor: true
   lang: en
   avatarForce: false
   meta: ['nick', 'mail']
   requiredFields: []
-  admin: 'TriDiamond'
+  admin: 'Arron'
   recentComment: true
 
 # Enable Busuanzi statistic plugin
