@@ -131,7 +131,7 @@ where
     column_name in []
 ```
 
-## 8. LIMIT 分页
+## 8. LIMIT / FETCH
 
 基础语法如下：
 
@@ -148,4 +148,74 @@ select
 from
 	table_name
 limit count offset count
+
+-- fetch
+select
+	column_name
+from
+	table_name
+fetch first count row
 ```
+
+## 7. 多表查询
+
+### 7.1 内联接  INNER JOIN
+
+内联接是最常用的联接类型。它通过指定连接条件在两个或多个表之间进行关联查询，并返回满足连接条件的行。只有在连接条件匹配的情况下，从两个表中获取匹配的数据。语法为：
+
+```sql
+select
+    column_name,
+    column_name,
+    ...
+from
+    table_name1
+inner join table_name2
+    on condition;
+```
+
+### 7.2 左外联接 LEFT JOIN
+
+左外联接返回左表的所有行，以及满足连接条件的右表的匹配行。如果右表中没有匹配的行，则右表的列值为 NULL。语法为：
+
+```sql
+select
+    column_name,
+    column_name,
+    ...
+from
+    table_name1
+left join table_name2
+    on condition;
+```
+
+### 7.3 右外联接 LEFT JOIN
+
+右外联接与左外联接相反，返回右表的所有行，以及满足连接条件的左表的匹配行。如果左表中没有匹配的行，则左表的列值为 NULL。语法为：
+
+```sql
+select
+    column_name,
+    column_name,
+    ...
+from
+    table_name1
+right join table_name2
+    on condition;
+```
+
+### 7.4 全外联接 FULL OUTER JOIN
+
+全外联接返回两个表中所有的行，如果没有匹配的行，则非匹配表的列值为 NULL。全外联接是左外联接和右外联接的组合。语法为：
+
+```sql
+select
+    column_name,
+    column_name,
+    ...
+from
+    table_name1
+full outer join table_name2
+    on condition;
+```
+
